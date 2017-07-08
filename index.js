@@ -52,3 +52,34 @@ document.getElementById('add').onclick = function() {
   op = '+';
   document.getElementById('count').innerText = String(pend);
 }
+document.getElementById('subtract').onclick = function() {
+  hold = Number(pend);
+  pend = '0';
+  op = '-';
+  document.getElementById('count').innerText = String(pend);
+}
+document.getElementById('multiply').onclick = function() {
+  hold = Number(pend);
+  pend = '0';
+  op = '*';
+  document.getElementById('count').innerText = String(pend);
+}
+document.getElementById('divide').onclick = function() {
+  hold = Number(pend);
+  pend = '0';
+  op = '/';
+  document.getElementById('count').innerText = String(pend);
+}
+
+document.getElementById('equals').onclick = function() {
+  pend = Number(pend);
+  if(hold === null || oper === null) return;
+  else if (oper === '+') res = pend + hold;
+  else if (oper === '-') res = pend - hold;
+  else if (oper === '*') res = pend * hold;
+  else if (oper === '/') res = pend / hold;
+  pend = String(res);
+  hold = null;
+  op = null;
+    document.getElementById('count').innerText = String(res);
+}
