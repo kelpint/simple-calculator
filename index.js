@@ -70,14 +70,20 @@ document.getElementById('divide').onclick = function() {
   oper = '/';
   document.getElementById('count').innerText = String(pend);
 }
-
+document.getElementById('reset').onclick = function() {
+  pend = '0';
+  res = 0;
+  oper = null;
+  hold = null;
+  document.getElementById('count').innerText = String(pend);
+}
 document.getElementById('equals').onclick = function() {
   pend = Number(pend);
   if(hold === null || oper === null) return;
-  else if (oper === '+') res = pend + hold;
-  else if (oper === '-') res = pend - hold;
-  else if (oper === '*') res = pend * hold;
-  else if (oper === '/') res = pend / hold;
+  else if (oper === '+') res = hold + pend;
+  else if (oper === '-') res = hold - pend;
+  else if (oper === '*') res = hold * pend;
+  else if (oper === '/') res = hold / pend;
   pend = String(res);
   hold = null;
   op = null;
