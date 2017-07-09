@@ -49,25 +49,25 @@ document.getElementById('num0').onclick = function() {
 document.getElementById('add').onclick = function() {
   hold = Number(pend);
   pend = '0';
-  op = '+';
+  oper = '+';
   document.getElementById('count').innerText = String(pend);
 }
 document.getElementById('subtract').onclick = function() {
   hold = Number(pend);
   pend = '0';
-  op = '-';
+  oper = '-';
   document.getElementById('count').innerText = String(pend);
 }
 document.getElementById('multiply').onclick = function() {
   hold = Number(pend);
   pend = '0';
-  op = '*';
+  oper = '*';
   document.getElementById('count').innerText = String(pend);
 }
 document.getElementById('divide').onclick = function() {
   hold = Number(pend);
   pend = '0';
-  op = '/';
+  oper = '/';
   document.getElementById('count').innerText = String(pend);
 }
 
